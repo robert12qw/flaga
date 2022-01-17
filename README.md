@@ -58,7 +58,7 @@ python3 xd.py
 
 sudo systemctl start flaga.service
 
-#### 5. Restartujemy nignxa i serwisy.
+#### 5. Restartujemy nginxa i serwisy.
 
 ```
 sudo systemctl daemon-reload
