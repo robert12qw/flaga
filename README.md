@@ -38,7 +38,7 @@ python3 xD.py
 AWS Ubuntu 18/20 (Home i większość innych):
 ```
 apt install git
-mkdir /var/www <---- to już jest
+mkdir /var/www <---- to w AWS trzeba zrobić
 cd /var/www
 git clone https://github.com/lukasz-test/flaga.git
 cd flaga
