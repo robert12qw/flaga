@@ -9,6 +9,12 @@ ssh nazwa_uzytkownika@adres_ip
 
 #### 2. Uaktualniamy paczki (packages).
 
+VPS Ubuntu 18/20 (Home i większość innych):
+```
+apt update
+apt upgrade
+```
+AWS Ubuntu 18/20 (Home i większość innych):
 ```
 sudo apt update
 sudo apt upgrade
