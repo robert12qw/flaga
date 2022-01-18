@@ -21,8 +21,8 @@ sudo apt upgrade
 sudo apt install git
 sudo mkdir /var/www
 sudo cd /var/www
-sudo git clone https://github.com/lukasz-test/flaga.git
-sudo cd flaga
+git clone https://github.com/lukasz-test/flaga.git
+cd flaga
 sudo python3 xD.py
 ```
 
