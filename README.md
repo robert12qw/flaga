@@ -11,7 +11,7 @@ PS: W trakcie instalacji gdy proces się zatrzymuje z zapytaniem "Do you want to
 
 
 
-#### Dla AWS Ubuntu 18/20 (Home i większość innych):
+#### Uprawnienia root dla AWS Ubuntu 18/20 (Nie trzeba tego kroku robić dla VPS z Home i większość innych):
 Ustawiamy uprawnienia root ("administratora").
 
 
