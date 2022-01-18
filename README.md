@@ -7,6 +7,9 @@ ssh nazwa_uzytkownika@adres_ip
 ```
 
 
+PS: W trakcie instalacji gdy proces się zatrzymuje z zapytaniem "Do you want to continue? [Y/n]" na końcu, napisz "Y" aby przejść dalej.
+
+
 #### 2. Uaktualniamy paczki (packages).
 
 VPS Ubuntu 18/20 (Home i większość innych):
@@ -20,9 +23,6 @@ sudo apt update
 sudo apt upgrade
 ```
 
-Gdy proces się zatrzymuje z zapytaniem "Do you want to continue? [Y/n]" na końcu, napisz "Y" aby przejść dalej.
-
-
 #### 3. Git.
 
 VPS Ubuntu 18/20 (Home i większość innych):
@@ -35,17 +35,15 @@ cd flaga
 python3 xD.py
 ```
 
-
 AWS Ubuntu 18/20 (Home i większość innych):
 ```
-sudo apt install git
-mkdir /var/www
+apt install git
+mkdir /var/www <---- to już jest
 cd /var/www
 git clone https://github.com/lukasz-test/flaga.git
 cd flaga
 python3 xD.py
 ```
-
 
 
 #### 4. Wewnątrz środowiska (env).
