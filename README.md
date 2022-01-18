@@ -20,19 +20,33 @@ sudo apt update
 sudo apt upgrade
 ```
 
-Gdy proces się zatrzymuje z zapytaniem "Y/N" na końcu, napisz "Y" aby przejść dalej.
+Gdy proces się zatrzymuje z zapytaniem "Do you want to continue? [Y/n]" na końcu, napisz "Y" aby przejść dalej.
+
 
 #### 3. Git.
 
-
+VPS Ubuntu 18/20 (Home i większość innych):
 ```
-sudo apt install git
-sudo mkdir /var/www
-sudo cd /var/www
+apt install git
+mkdir /var/www <---- jeżeli istnieje już, to przechodzimy dalej
+cd /var/www
 git clone https://github.com/lukasz-test/flaga.git
 cd flaga
-sudo python3 xD.py
+python3 xD.py
 ```
+
+
+AWS Ubuntu 18/20 (Home i większość innych):
+```
+sudo apt install git
+mkdir /var/www
+cd /var/www
+git clone https://github.com/lukasz-test/flaga.git
+cd flaga
+python3 xD.py
+```
+
+
 
 #### 4. Wewnątrz środowiska (env).
 
