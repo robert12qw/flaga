@@ -10,20 +10,26 @@ ssh nazwa_uzytkownika@adres_ip
 PS: W trakcie instalacji gdy proces się zatrzymuje z zapytaniem "Do you want to continue? [Y/n]" na końcu, napisz "Y" aby przejść dalej.
 
 
+
+#### Dla AWS Ubuntu 18/20 (Home i większość innych):
+Ustawiamy uprawnienia root ("administratora").
+
+
+```
+sudo passwd 
+```
+Podaj hasło i zapisz. Wpisz jeszcze poniższe i podaj hasło.
+```
+su - 
+```
+
+Jesteś na serwerze jako root. 
+
 #### 2. Uaktualniamy paczki (packages).
 
-VPS Ubuntu 18/20 (Home i większość innych):
 ```
 apt update
 apt upgrade
-```
-AWS Ubuntu 18/20 (Home i większość innych):
-
-PS: Akiwa, zróbcie z rootem odrazu ścieżkę to sudo pounikammy dla AWS 
-
-```
-sudo apt update
-sudo apt upgrade
 ```
 
 #### 3. Git.
