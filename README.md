@@ -20,6 +20,8 @@ sudo apt update
 sudo apt upgrade
 ```
 
+Gdy proces się zatrzymuje z zapytaniem "Y/N" na końcu, napisz "Y" aby przejść dalej.
+
 #### 3. Git.
 
 
