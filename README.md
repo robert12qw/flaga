@@ -64,6 +64,9 @@ domena = nazwa_domeny.pl
 ```
 nano settings.ini
 ```
+Aby zapisać wciśnij ctrl+s
+Aby zamknąć wciśnij ctrl+x
+
 
 Instalacja wymaganych bibliotek.
 ```
