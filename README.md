@@ -31,7 +31,6 @@ sudo apt upgrade
 VPS Ubuntu 18/20 (Home i większość innych):
 ```
 apt install git
-mkdir /var/www <---- jeżeli istnieje już, to przechodzimy dalej
 cd /var/www
 git clone https://github.com/lukasz-test/flaga.git
 cd flaga
