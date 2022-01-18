@@ -18,6 +18,9 @@ apt update
 apt upgrade
 ```
 AWS Ubuntu 18/20 (Home i większość innych):
+
+PS: Akiwa, zróbcie z rootem odrazu ścieżkę to sudo pounikammy dla AWS 
+
 ```
 sudo apt update
 sudo apt upgrade
@@ -78,15 +81,14 @@ Uruchom skrypt przygotowujący hosting w serwerze.
 python3 xd.py
 ```
 
-
-sudo systemctl start flaga.service
+systemctl start flaga.service
 
 #### 5. Restartujemy nginxa i serwisy.
 
 ```
-sudo systemctl daemon-reload
+systemctl daemon-reload
 systemctl restart nginx
-sudo systemctl restart flaga.service
+systemctl restart flaga.service
 ```
 
 
@@ -100,9 +102,9 @@ nano xd.txt
 
 Przeładowujemy stronę.
 ```
-sudo systemctl daemon-reload
+systemctl daemon-reload
 systemctl restart nginx
-sudo systemctl restart flaga.service
+systemctl restart flaga.service
 ```
 
 
