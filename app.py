@@ -11,5 +11,10 @@ def index():
 def xd():
     return render_template("xd.html")
 
+@app.route('/kubus puchatek')
+def kubus_puchatek():
+	return render_template("kubus_puchatek.html")
+
+
 if __name__=="__main__":
     app.run()
