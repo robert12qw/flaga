@@ -11,7 +11,7 @@ def index():
 def xd():
     return render_template("xd.html")
 
-@app.route('/kubus puchatek')
+@app.route('/kubus_puchatek')
 def kubus_puchatek():
 	return render_template("kubus_puchatek.html")
 
