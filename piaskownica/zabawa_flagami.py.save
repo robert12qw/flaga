@@ -1,0 +1,9 @@
+# Listy
+
+
+
+lista = [1, 2, 3]
+
+#Pętli
+for i in lista:
+	print (i)
