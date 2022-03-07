@@ -13,7 +13,7 @@ def xd():
 
 @app.route('/nowy')
 def nowy():
-    return 'nowy'
+    return 'nowy!'
 
 @app.route('/kubus_puchatek')
 def kubus_puchatek():
