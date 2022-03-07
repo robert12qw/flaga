@@ -1,5 +1,5 @@
 #import / biblioteki
-import requests #biblioteka w ogóle, pip3, dokumentacja, wersja.
+import requests #biblioteka w ogóle, pip3, dokumentacja, wersja .
 link = 'http://zajecia-programowania-xd.pl/flagi'
 flagi_response = requests.get(link)
 flagi_tekst =  flagi_response.text
