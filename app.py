@@ -11,6 +11,10 @@ def index():
 def xd():
     return render_template("xd.html")
 
+@app.route('/nowy')
+def nowy():
+    return 'nowy'
+
 @app.route('/kubus_puchatek')
 def kubus_puchatek():
 	return render_template("kubus_puchatek.html")
