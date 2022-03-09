@@ -1,5 +1,9 @@
 from flask import Flask, render_template
 
+
+
+from moje_programy.character_wiki import character
+
 app=Flask(__name__)
 
 @app.route('/')
@@ -16,18 +20,14 @@ def flaga_dla_ukrainy():
     return render_template("flaga_dla_ukrainy.html")
 
 
-@app.route('/nowy')
-def nowy():
-    return 'nowy!'
-
-@app.route('/kubus_puchatek')
-def kubus_puchatek():
-	return render_template("kubus_puchatek.html")
-
-
 @app.route('/brudnopis')
 def brudnopis():
-    return render_template("brudnopis")
+    hero = character ()
+    return render_template("brudnopis.html", hero=hero)
+
+    @app.route('/kubus_puchatek')
+def kubus_puchatek():
+	return render_template("kubus_puchatek.html")
 
 if __name__=="__main__":
     app.run()
