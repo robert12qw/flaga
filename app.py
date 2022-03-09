@@ -19,11 +19,16 @@ def xd():
 def flaga_dla_ukrainy():
     return render_template("flaga_dla_ukrainy.html")
 
-
 @app.route('/brudnopis')
 def brudnopis():
-    hero = character ()
-    return render_template("brudnopis.html", hero=hero)
+
+    moj_super_hero = tygrysek
+    super_hero = character(moj_super_hero)
+    super_hero2 = character2()
+
+    return render_template("brudnopis.html", hero=super_hero, hero2=super_hero2)
+
+
 
     @app.route('/kubus_puchatek')
 def kubus_puchatek():
