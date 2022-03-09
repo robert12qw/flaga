@@ -25,5 +25,9 @@ def kubus_puchatek():
 	return render_template("kubus_puchatek.html")
 
 
+@app.route('/brudnopis')
+def brudnopis():
+    return render_template("brudnopis")
+
 if __name__=="__main__":
     app.run()
