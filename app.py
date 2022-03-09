@@ -1,5 +1,7 @@
 from flask import Flask, render_template
 
+import wikipedia as wiki
+import random
 
 
 from moje_programy.character_wiki import character
@@ -22,15 +24,15 @@ def flaga_dla_ukrainy():
 @app.route('/brudnopis')
 def brudnopis():
 
-    moj_super_hero = tygrysek
-    super_hero = character(moj_super_hero)
-    super_hero2 = character2()
-
-    return render_template("brudnopis.html", hero=super_hero, hero2=super_hero2)
-
+    super_heroes = ['Tygrysek', 'Sowa']
+    chosen_hero = random.choice( super_heroes)
+    super_hero = character( chosen_hero)
+    return render_template("brudnopis.html", hero=super_hero, super_heroes=super_heroes)
 
 
-    @app.route('/kubus_puchatek')
+
+
+@app.route('/kubus_puchatek')
 def kubus_puchatek():
 	return render_template("kubus_puchatek.html")
 
