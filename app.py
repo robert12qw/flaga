@@ -22,12 +22,15 @@ def flaga_dla_ukrainy():
 
 import random
 from moje_programy.character_wiki import character
+from moje_programy.open_poem import open_poem
 @app.route('/brudnopis')
 def brudnopis():
-    super_heroes = ['Tygrysek', 'Sowa', "Kangurzątko", 'Kłapouchy' ]
+    super_heroes = ['Bruce Lee', 'Kubuś Puchatek', 'Kopernik', 'Małysz']
     chosen_hero = random.choice( super_heroes)
-    super_hero = character( chosen_hero)
-    return render_template("brudnopis.html", hero=super_hero, super_heroes=super_heroes)
+    description = character( chosen_hero).encode('utf-8').decode()
+    poem_lines = open_poem()
+    return render_template("brudnopis.html", hero=chosen_hero, 
+description=description, poem_lines=poem_lines)
 
 @app.route('/kubus_puchatek')
 def kubus_puchatek():

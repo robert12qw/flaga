@@ -1,3 +1,6 @@
+import wikipedia as wiki
+wiki.set_lang("pl")
+
 def character( name):
-name = name.upper()
-return name
+    content = wiki.summary(name, sentences=6)
+    return content
