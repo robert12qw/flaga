@@ -1,5 +1,5 @@
 def open_poem():
-    text_lines = open('/var/www/flaga/dane/poem.txt', encoding='utf-8').readlines()
+    text_lines = open('dane/poem.txt', encoding='utf-8').readlines()
 
     poem_lines = []
     for line in text_lines:
