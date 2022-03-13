@@ -34,8 +34,8 @@ description=description, poem_lines=poem_lines)
 
 
 import random
-from moje_programy.przepis_wiki import przepis
 from moje_programy.open_lista_składników import open_poem
+from moje_programy.przepis_wiki import przepis
 @app.route('/3przepisy')
 def przepisy():
     super_heroes = ['chałka', 'budyń', 'chleb']
