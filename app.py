@@ -40,8 +40,8 @@ from moje_programy.przepis_wiki import przepis
 def przepisy():
     super_heroes = ['chałka', 'budyń', 'chleb']
     chosen_hero = random.choice( super_heroes)
-    description = przepis( chosen_hero).encode('utf-8').decode()
     poem_lines = open_poem()
+    description = przepis( chosen_hero).encode('utf-8').decode()
     return render_template("3przepisy.html", hero=chosen_hero, 
 description=description, poem_lines=poem_lines)
 
