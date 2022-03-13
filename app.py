@@ -32,11 +32,12 @@ def brudnopis():
     return render_template("brudnopis.html", hero=chosen_hero, 
 description=description, poem_lines=poem_lines)
 
+
 import random
 from moje_programy.character_przepisy import character
 from moje_programy.open_lista_składników import open_poem
 @app.route('/3przepisy')
-def 3przepisy():
+def przepisy():
     super_heroes = ['chałka', 'budyń', 'chleb']
     chosen_hero = random.choice( super_heroes)
     description = character( chosen_hero).encode('utf-8').decode()
