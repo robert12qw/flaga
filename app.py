@@ -1,10 +1,11 @@
-import random
+
 
 from flask import Flask, render_template
 from moje_programy.character_wiki import character
+import random
 from moje_programy.open_poem import open_poem
 
-import wikipedia as wiki
+#import wikipedia as wiki
 
 app=Flask(__name__)
 
@@ -50,13 +51,13 @@ def ciekawe_postacie():
         lista_ciekawych_postaci.pop(indeks)
 
         opis_postaci = character(postac)
-        info = [postac, opis_postaci]
+        dlugosc_opisu = len(opis_postaci)
+        info = [postac, opis_postaci, dlugosc_opisu]
         opisy_postaci.append(info)
 
     return render_template("ciekawe-postacie.html", opisy_postaci=opisy_postaci)
 
-
-
+#jhg
 
 
 
