@@ -1,5 +1,6 @@
 from flask import Flask, render_template
-from moje_programy.charakter_wiki import character
+from moje_programy.character_wiki import character
+from moje_programy.open_poem import open_poem
 import random
 import wikipedia as wiki
 
@@ -10,30 +11,40 @@ def index():
     text = open('xd.txt').read()
     return render_template("index.html", text=text)
 
+@app.route('/flaga-dla-ukrainy')
+def flaga_dla_ukrainy():
+    return render_template("flaga-dla-ukrainy.html")
+#https://pl.tradingview.com/widget/advanced-chart/   ----wykres kursy RUB/USD
+
 @app.route('/xd')
 def xd():
     return render_template("xd.html")
 
 
+
+
 @app.route('/ciekawe-postacie')
 def ciekawe_postacie():
     lista_ciekawych_postaci = [
-        'Małysz',
-        'Kopernik',
-        'Maria Skłodowska',
-        'Kościuszko',
-        'Donald',
-        'Myszka Miki',
+        'Pudzianowski',         # 0
+        'Małysz',               # 1
+        'Kopernik',             # 2
+        'Maria Skłodowska',     # 3
+        'Kościuszko',           # 4
+        'Donald',               # 5
+        'Myszka Miki',          # 6
     ]
-
     opisy_postaci = []
     for i in range(3):
         postac = random.choice(lista_ciekawych_postaci)
+        indeks = lista_ciekawych_postaci.index(postac)
+        lista_ciekawych_postaci.pop(indeks)
+
         opis_postaci = character(postac)
-        opisy_postaci.append(opis_postaci)
+        info = [postac, opis_postaci]
+        opisy_postaci.append(info)
 
     return render_template("ciekawe-postacie.html", opisy_postaci=opisy_postaci)
-
 
 
 
