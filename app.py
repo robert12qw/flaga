@@ -16,9 +16,29 @@ def index():
 def xd():
     return render_template("xd.html")
 
-@app.route('/flaga_dla_ukrainy')
+
+
+@app.route('/ciekawe-postacie')
 def flaga_dla_ukrainy():
     return render_template("flaga_dla_ukrainy.html")
+
+
+
+
+
+
+
+
+@app.route('/flaga_dla_ukrainy')
+def ciekawe_postacie():
+    return 'postacie'
+    #return render_template("ciekawe-postacie.html")
+
+
+
+
+
+
 
 import random
 from moje_programy.character_wiki import character
@@ -33,17 +53,17 @@ def brudnopis():
 description=description, poem_lines=poem_lines)
 
 
-import random
-from moje_programy.open_lista_składników import open_poem
-from moje_programy.przepis_wiki import przepis
-@app.route('/3przepisy')
-def przepisy():
-    super_heroes = ['chałka', 'budyń', 'chleb']
-    chosen_hero = random.choice( super_heroes)
-    poem_lines = open_poem()
-    description = przepis( chosen_hero).encode('utf-8').decode()
-    return render_template("3przepisy.html", hero=chosen_hero, 
-description=description, poem_lines=poem_lines)
+#import random
+#from moje_programy.open_lista_składników import open_poem
+#from moje_programy.przepis_wiki import przepis
+#@app.route('/3przepisy')
+#def przepisy():
+ #   potrawy = ['chałka', 'budyń', 'chleb']
+  #  wybrana_potrawa = random.choice( potrawy )
+   # poem_lines = open_poem()
+    #description = przepis( wybrana_potrawa).encode('utf-8').decode()
+   # return render_template("3przepisy.html", potrawa=wybrana_potrawa, 
+#description=description, poem_lines=poem_lines)
 
 
 
