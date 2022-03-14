@@ -1,7 +1,9 @@
+import random
+
 from flask import Flask, render_template
 from moje_programy.character_wiki import character
 from moje_programy.open_poem import open_poem
-import random
+
 import wikipedia as wiki
 
 app=Flask(__name__)
@@ -11,17 +13,24 @@ def index():
     text = open('xd.txt').read()
     return render_template("index.html", text=text)
 
+@app.route('/xd')
+def xd():
+    return render_template("xd.html")
+
 @app.route('/flaga-dla-ukrainy')
 def flaga_dla_ukrainy():
     return render_template("flaga-dla-ukrainy.html")
 #https://pl.tradingview.com/widget/advanced-chart/   ----wykres kursy RUB/USD
 
-@app.route('/xd')
-def xd():
-    return render_template("xd.html")
+@app.route('/brudnopis')
+def brudnopis():
+    super_heroes = ['Bruce Lee']  #, 'Kubuś Puchatek', 'Iwan Franko', 'Chrystyna Ałczewska' ]
+    chosen_hero = random.choice (super_heroes)
+    super_hero = character (chosen_hero)
 
-
-
+    poem_lines = open_poem()
+    return render_template("brudnopis.html", hero=super_hero, super_heroes=super_heroes, poem_lines=poem_lines)
+    
 
 @app.route('/ciekawe-postacie')
 def ciekawe_postacie():
@@ -52,17 +61,6 @@ def ciekawe_postacie():
 
 
 
-import random
-from moje_programy.character_wiki import character
-from moje_programy.open_poem import open_poem
-@app.route('/brudnopis')
-def brudnopis():
-    super_heroes = ['Bruce Lee', 'Kubuś Puchatek', 'Kopernik', 'Małysz']
-    chosen_hero = random.choice( super_heroes)
-    description = character( chosen_hero).encode('utf-8').decode()
-    poem_lines = open_poem()
-    return render_template("brudnopis.html", hero=chosen_hero, 
-description=description, poem_lines=poem_lines)
 
 
 #import random

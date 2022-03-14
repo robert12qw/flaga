@@ -1,4 +1,7 @@
-{% for postac, opis in opisy_postaci %}
-    <h1>{{postac}}</h1>
-    <p>{{opis}}</p>
+<h1>Postacie w kolejności ilości słów w opisie:</h1>
+{% for p, o, d in opisy_postaci %}
+    <h1>{{p}}</h1>
+    <p>{{o}}</p>
+    <h1>{{d}}</h1>
+    <p>Ilość słów w każdym opisie</p>
 {% endfor %}
