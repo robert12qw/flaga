@@ -41,6 +41,8 @@ def ciekawe_postacie():
 
 
 
+
+
 import random
 from moje_programy.character_wiki import character
 from moje_programy.open_poem import open_poem
