@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+from moje_programy.charakter_wiki import character
 
 import wikipedia as wiki
 
@@ -18,9 +19,13 @@ def xd():
 
 
 
+
+
+
 @app.route('/ciekawe-postacie')
 def ciekawe_postacie():
     zmienna_python = 'abc'
+    ciekawa_poostac = character ("Małysz")
     return render_template("ciekawe-postacie.html", zmienna_html=zmienna_python)
 
 
@@ -28,10 +33,20 @@ def ciekawe_postacie():
 
 
 
-@app.route('/flaga_dla_ukrainy')
-def ciekawe_postacie():
-    return 'postacie'
-    #return render_template("ciekawe-postacie.html")
+
+
+
+
+
+
+
+
+
+
+#@app.route('/flaga_dla_ukrainy')
+#def ciekawe_postacie():
+ #   return 'postacie'
+  #  #return render_template("ciekawe-postacie.html")
 
 
 
