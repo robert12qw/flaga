@@ -1,10 +1,9 @@
 from flask import Flask, render_template
 from moje_programy.charakter_wiki import character
+import random
+
 
 import wikipedia as wiki
-
-
-
 
 app=Flask(__name__)
 
@@ -18,36 +17,24 @@ def xd():
     return render_template("xd.html")
 
 
-
-
-
-
 @app.route('/ciekawe-postacie')
 def ciekawe_postacie():
-    zmienna_python = 'abc'
-    ciekawa_poostac = character ("Małysz")
-    return render_template("ciekawe-postacie.html", zmienna_html=zmienna_python)
+    lista_ciekawych_postaci = [
+        'Małysz',
+        'Kopernik',
+        'Maria Skłodowska',
+        'Kościuszko',
+        'Donald',
+        'Myszka Miki',
+    ]
 
+    opisy_postaci = []
+    for i in range(3):
+        postac = random.choice(lista_ciekawych_postaci)
+        opis_postaci = character(postac)
+        opisy_postaci.append(opis_postaci)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#@app.route('/flaga_dla_ukrainy')
-#def ciekawe_postacie():
- #   return 'postacie'
-  #  #return render_template("ciekawe-postacie.html")
-
+    return render_template("ciekawe-postacie.html", opisy_postaci=opisy_postaci)
 
 
 
@@ -78,9 +65,6 @@ description=description, poem_lines=poem_lines)
     #description = przepis( wybrana_potrawa).encode('utf-8').decode()
    # return render_template("3przepisy.html", potrawa=wybrana_potrawa, 
 #description=description, poem_lines=poem_lines)
-
-
-
 
 
 
