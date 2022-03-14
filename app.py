@@ -19,8 +19,9 @@ def xd():
 
 
 @app.route('/ciekawe-postacie')
-def flaga_dla_ukrainy():
-    return render_template("flaga_dla_ukrainy.html")
+def ciekawe_postacie():
+    zmienna_python = 'abc'
+    return render_template("ciekawe-postacie.html",zmienna_html=zmienna-python)
 
 
 
