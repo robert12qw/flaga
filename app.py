@@ -1,8 +1,6 @@
 from flask import Flask, render_template
 from moje_programy.charakter_wiki import character
 import random
-
-
 import wikipedia as wiki
 
 app=Flask(__name__)
