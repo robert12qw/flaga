@@ -21,9 +21,7 @@ def xd():
 @app.route('/ciekawe-postacie')
 def ciekawe_postacie():
     zmienna_python = 'abc'
-    return render_template("ciekawe-postacie.html",zmienna_html=zmienna-python)
-
-
+    return render_template("ciekawe-postacie.html", zmienna_html=zmienna_python)
 
 
 
