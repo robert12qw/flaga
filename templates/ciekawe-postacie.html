@@ -1,1 +1,4 @@
-{{ opisy_postaci }}
+{% for postac, opis in opisy_postaci %}
+    <h1>{{postac}}</h1>
+    <p>{{opis}}</p>
+{% endfor %}
